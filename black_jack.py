@@ -14,6 +14,8 @@ def starting_cards():
     c2 = get_card()
     
     start_cards = c1 + c2
+    if start_cards == 22:
+        start_cards = 21
     return start_cards
 
 
