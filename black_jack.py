@@ -163,19 +163,23 @@ while money > 0:
     elif c == 0:
         print(f"DRAW | You have {money}")
     
-    end = ender()
+    if money > 0:
+        end = ender()
 
-    if end == 1:
-        continue
+        if end == 1:
+            continue
 
-    elif end == 2:
-        if money > 1000:
-            print(f"You have Won {money-1000}")
-            break
+        elif end == 2:
+            if money > 1000:
+                print(f"You have Won {money-1000}")
+                break
 
-        elif money < 1000:
-            print(f"You have Lost {1000 - money}")
-            break
-        
-        else:
-            print("You didn't won anything")
+            elif money < 1000:
+                print(f"You have Lost {1000 - money}")
+                break
+            
+            else:
+                print("You didn't won anything")
+    else:
+        print("You lost all your money")
+        break
